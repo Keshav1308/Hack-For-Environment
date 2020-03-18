@@ -8,5 +8,5 @@ Azure Monitor will be used here for monitoring and Azure Automation will be used
 
 
 
-![](.\Images\Architecture.PNG)
+![](./Images/Architecture.PNG)
 
