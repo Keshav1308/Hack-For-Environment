@@ -22,7 +22,7 @@ Our solution will make use of the following Azure Components.
 
 
 
-![](.\Images\Architecture.PNG)
+![](./Images/Architecture.PNG)
 
 ##### 
 
