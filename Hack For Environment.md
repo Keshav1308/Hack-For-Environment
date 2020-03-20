@@ -24,6 +24,12 @@ Our solution will make use of the following Azure Components.
 
 ![](./Images/Architecture.PNG)
 
+Azure Monitor will help us in analyzing the usage and requirement of the particular devices. Based on this telemetry data we can identify whether that device is needed during off hours or we can safely turn it off.
+
+Once the machine is identified we can initiate the runbook to shutdown it during non business hours. Most of the resources are located in on-premises infrastructure.  So for communicating with these machines Hybrid Runbook worker will be used.  Runbook code will be executed on the HRW. 
+
+
+
 ##### 
 
 #### Team 
