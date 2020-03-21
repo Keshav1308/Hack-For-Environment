@@ -22,15 +22,17 @@ Our solution will make use of the following Azure Components.
 
 Azure Monitor will help us in analyzing the usage and requirement of the particular devices. Based on this telemetry data we can identify whether that device is needed during off hours or we can safely turn it off.
 
-Once the machine is identified we can initiate the runbook to shutdown it during non business hours. Most of the resources are located in on-premises infrastructure.  So for communicating with these machines Hybrid Runbook worker will be used.  Runbook code will be executed on the HRW. 
+Once the machine is identified we can initiate  runbook to shutdown it during non business hours. Most of  resources are located in on-premises infrastructure.  So for communicating with these machines Hybrid Runbook worker will be used.  Runbook code will be executed on the HRW. 
+
+We have created the schedules for the runbook. Schedules will automatically execute the code. These runbook will execute everyday around 11 PM IST. Easily these runbooks will switch off the devices. 
 
 
 
 ![](./Images/Architecture.PNG)
 
-Azure Monitor will help us in analyzing the usage and requirement of the particular devices. Based on this telemetry data we can identify whether that device is needed during off hours or we can safely turn it off.
+Azure Monitor will help us in analyzing usage and requirement of particular devices. Based on this telemetry data we can identify whether that device is needed during off hours or we can safely turn it off.
 
-Once the machine is identified we can initiate the runbook to shutdown it during non business hours. Most of the resources are located in on-premises infrastructure. So for communicating with these machines Hybrid Runbook worker will be used. Runbook code will be executed on the HRW.
+Once the machine is identified we can initiate  runbook to shutdown it during non business hours. Most of  resources are located in on-premises infrastructure. So for communicating with these machines Hybrid Runbook worker will be used. Runbook code will be executed on the HRW.
 
 
 
