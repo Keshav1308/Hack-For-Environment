@@ -38,10 +38,10 @@ Once the machine is identified we can initiate the runbook to shutdown it during
 
 #### Code 
 
-|                       |                                                              |
-| --------------------- | ------------------------------------------------------------ |
-| Shutdown-AzureVM.md** | https://github.com/Keshav1308/Hack-For-Environment/blob/master/Hackathon-Shutdown-AzureVM.md |
-|                       |                                                              |
+|                               |                                                              |
+| ----------------------------- | ------------------------------------------------------------ |
+| Shutdown-AzureVM.md**         | https://github.com/Keshav1308/Hack-For-Environment/blob/master/Hackathon-Shutdown-AzureVM.md |
+| Hackathon-Shutdown-OnPremises | https://github.com/Keshav1308/Hack-For-Environment/blob/master/Hackathon-Shutdown-OnPremises.md |
 
 
 
