@@ -8,12 +8,15 @@ Quite often we see the servers, desktops and other devices are up and running du
 
 Azure Monitor will be used here for monitoring and Azure Automation will be used for controlling the devices. With this solution lot of electricity can be saved and eventually it will reduce the Carbon foot print.
 
-With this solution we can control any servers\desktops\laptops running in :- 
 
-- Private Cloud or Datacenter. 
-- Public Cloud.
-- Hybrid Cloud. 
-- On-Premises 
+
+#### Project Video 
+
+| Location                                                 | Link                                                         |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| **Onedrive<br /><br />Use this link for watching video** | https://1drv.ms/v/s!AtaahoqRQxFCh81NCeg1ls5HwX-7OQ?e=94KnHz  |
+| Github                                                   | https://github.com/Keshav1308/Hack-For-Environment/blob/master/Hack-For-Environment-01.mp4?raw=true |
+
 
 
 #### Solution Design
@@ -26,14 +29,14 @@ Our solution will make use of the following Azure Components.
 | Azure Automation            | Azure Automation delivers a cloud-based automation and configuration service that provides consistent management across your Azure and non-Azure environments. Azure Automation provides you the ability to automate frequent, time-consuming, and error-prone cloud management tasks.<br /><br />Azure Automation is used here to run the code for Shutting down the machines during non-business hours. |
 | Azure Hybrid Runbook Worker | Hybrid Runbook Worker feature of Azure Automation can directly run runbooks on the computer that's hosting the role and against resources in the environment to manage those local resources. <br /><br />Hybrid Runbook Worker is used here to run the code directly of the on-premises machines.  This will also allow us to execute the code on the machines which resided on the on-premises infrastructure. |
 
-Azure Monitor will help us in analyzing the usage and requirement of the particular devices. Based on this telemetry data we can identify whether that device is needed during off hours or we can safely turn it off.
+Azure Monitor will help us in analyzing the usage and requirement of  particular devices. Based on this telemetry data we can identify whether that device is needed during off hours or we can safely turn it off.
 
-Once the machine is identified we can initiate  runbook to shutdown it during non business hours. Most of  resources are located in on-premises infrastructure.  So for communicating with these machines Hybrid Runbook worker will be used.  Runbook code will be executed on the HRW. 
+Once the machine is identified we can initiate the runbook to shutdown it during non business hours. Most of the resources are located in on-premises infrastructure.  So for communicating with these machines Hybrid Runbook worker will be used.  Runbook code will be executed on the HRW. 
 
-We have created the schedules for the runbook. Schedules will automatically execute the code. These runbook will execute everyday around 11 PM IST. Easily these runbooks will switch off the devices. 
 
 
 ![](./Images/Architecture.PNG)
+
 
 
 ##### 
@@ -42,7 +45,7 @@ We have created the schedules for the runbook. Schedules will automatically exec
 
 |                               |                                                              |
 | ----------------------------- | ------------------------------------------------------------ |
-| Shutdown-AzureVM         | https://github.com/Keshav1308/Hack-For-Environment/blob/master/Hackathon-Shutdown-AzureVM.md |
+| Shutdown-AzureVM              | https://github.com/Keshav1308/Hack-For-Environment/blob/master/Hackathon-Shutdown-AzureVM.md |
 | Hackathon-Shutdown-OnPremises | https://github.com/Keshav1308/Hack-For-Environment/blob/master/Hackathon-Shutdown-OnPremises.md |
 
 
