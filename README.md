@@ -8,6 +8,12 @@ Quite often we see the servers, desktops and other devices are up and running du
 
 Azure Monitor will be used here for monitoring and Azure Automation will be used for controlling the devices. With this solution lot of electricity can be saved and eventually it will reduce the Carbon foot print.
 
+With this solution we can control any servers\desktops\laptops running in :- 
+
+- Private Cloud or Datacenter. 
+- Public Cloud.
+- Hybrid Cloud. 
+- On-Premises 
 
 
 #### Solution Design
