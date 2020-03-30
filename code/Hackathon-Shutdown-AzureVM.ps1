@@ -7,8 +7,6 @@
   You can attach a schedule to this runbook to run it at a specific time.
 #>
 
-
-
 # Log into azure
 
 $connectionName = "AzureRunAsConnection"
