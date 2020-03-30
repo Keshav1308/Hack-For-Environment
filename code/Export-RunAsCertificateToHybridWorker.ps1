@@ -24,7 +24,6 @@ This runbook exports the Run As certificate from an Azure Automation account to 
 .EXAMPLE
 .\Export-RunAsCertificateToHybridWorker
 
-
 # Generate the password used for this certificate
 Add-Type -AssemblyName System.Web -ErrorAction SilentlyContinue | Out-Null
 $Password = [System.Web.Security.Membership]::GeneratePassword(25, 10)
