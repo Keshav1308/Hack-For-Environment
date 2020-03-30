@@ -61,6 +61,7 @@ Once the machine is identified we can initiate the runbook to shutdown it during
 | ----------------------------- | ------------------------------------------------------------ |
 | Shutdown-AzureVM              | https://github.com/Keshav1308/Hack-For-Environment/blob/master/Hackathon-Shutdown-AzureVM.md |
 | Hackathon-Shutdown-OnPremises | https://github.com/Keshav1308/Hack-For-Environment/blob/master/Hackathon-Shutdown-OnPremises.md |
+| |Hackathon-Shutdown-AWSVM     | https://github.com/Keshav1308/Hack-For-Environment/blob/master/code/Hackathon-Shutdown-AWSVM
 
 
 
