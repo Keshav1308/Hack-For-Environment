@@ -41,7 +41,7 @@ Machines will be sending telemetry data to Azure Monitor. This data will help us
  
  **Performance chart of the machines for last 12 hours.** 
 
-![image-20200330203959997](./Images/Performance_Dashboard.png)
+![](./Images/Performance_Dashboard.png)
 
 Based on this telemetry data we can identify whether that device is needed during off hours or we can safely turn it off.
 
