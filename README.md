@@ -55,6 +55,12 @@ Once the machine is identified we can initiate the runbook to shutdown it during
 
 ##### 
 
+#### Security 
+
+Azure Monitor and Azure Automation follows the standard security principal defined by Microsoft.  All communication between connected systems and the  Azure Monitor Log Analytics service is encrypted. The TLS (HTTPS) protocol is used for encryption. 
+
+Hybrid Runbook Workers jobs run under the local System account on Windows servers. Also we can use Credential and Certificate assets in our runbook with cmdlets that allow us to specify credentials so that the runbook can authenticate to different resources.
+
 #### Code 
 
 |                               |                                                              |
