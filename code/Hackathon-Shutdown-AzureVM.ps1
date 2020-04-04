@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Connects to Azure and stops of all VMs in the specified Azure subscription or resource group
+  Connects to Azure and stops of all VMs in the specified Azure subscription or resource group.
 
 .DESCRIPTION
   This runbook connects to Azure and stops all VMs in an Azure subscription or resource group.  
