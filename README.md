@@ -55,6 +55,57 @@ Once the machine is identified we can initiate the runbook to shutdown it during
 
 ##### 
 
+#### Implementation steps 
+
+Below are high level  instructions for deployment of our solution.  This solution can also uses the existing resources.  For each steps please refer the Microsoft documentation for installing the components. 
+
+- First create the Log Analytics Workspace.
+  https://docs.microsoft.com/en-us/azure/azure-monitor/learn/quick-create-workspace
+  
+  
+
+- Deploy the monitoring agent on the machines which we want to control. There are many ways of deploying the agents.  On Azure servers we just need to enable the extension and on the non azure servers  agent can be deployed manually, SCCM or event it can be added to the deployment image. 
+  https://docs.microsoft.com/en-us/azure/azure-monitor/platform/agent-windows
+
+  
+
+- Enable the collection of the data for  'Performance Counter'.
+
+  https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-sources-performance-counters
+
+  
+
+- Dashboards  can be created for analyzing the data. Following KQL Queries can be used.
+  https://docs.microsoft.com/en-us/azure/azure-monitor/platform/view-designer
+
+  ```
+  Heartbeat | summarize heartbeatPerHour = count() by bin_at(TimeGenerated, 1h, ago(24h)), Computer | extend availablePerHour = iff(heartbeatPerHour > 0, true, false) | summarize totalAvailableHours = countif(availablePerHour == true) by Computer | extend availabilityRate = totalAvailableHours*100.0/24 | render piechart 
+  ```
+
+  ```
+  Perf | where TimeGenerated >= now(-12h)  | where (CounterName == "% Processor Time") | project TimeGenerated, CounterName, CounterValue, Computer  | summarize count()  by Computer | render piechart 
+  ```
+
+  
+
+- Create the Azure Automation accounts. 
+  https://docs.microsoft.com/en-us/azure/automation/automation-create-standalone-account
+
+  
+
+- Setup the Hybrid Runbook workers. 
+  https://docs.microsoft.com/en-us/azure/automation/automation-windows-hrw-install
+
+  
+
+- Setup the Runbook. Copy the code from the code folders for setting up the Runbook. 
+  https://docs.microsoft.com/en-us/azure/automation/manage-runbooks
+
+  
+
+- Create the schedules, which will execute the runbook at specific times. 
+  https://docs.microsoft.com/en-us/azure/automation/manage-runbooks#scheduling-a-runbook-in-the-azure-portal
+
 #### Security 
 
 Azure Monitor and Azure Automation follows the standard security principal defined by Microsoft.  All communication between connected systems and the  Azure Monitor Log Analytics service is encrypted. The TLS (HTTPS) protocol is used for encryption. 
