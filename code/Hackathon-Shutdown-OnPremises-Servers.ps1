@@ -9,3 +9,4 @@ Stop-Computer -computerName $Machine -Force
 Write-Output "Turnning Off the machine $Machine"
 
 Exit
+
