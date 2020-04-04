@@ -33,18 +33,23 @@ Our solution will make use of the following Azure Components.
 | Azure Automation            | Azure Automation delivers a cloud-based automation and configuration service that provides consistent management across your Azure and non-Azure environments. Azure Automation provides you the ability to automate frequent, time-consuming, and error-prone cloud management tasks.<br /><br />Azure Automation is used here to run the code for Shutting down the machines during non-business hours. |
 | Azure Hybrid Runbook Worker | Hybrid Runbook Worker feature of Azure Automation can directly run runbooks on the computer that's hosting the role and against resources in the environment to manage those local resources. <br /><br />Hybrid Runbook Worker is used here to run the code directly of the on-premises machines.  This will also allow us to execute the code on the machines which resided on the on-premises infrastructure. |
 
+
+
 ![](./Images/Architecture.PNG)
 
 
 Machines will be sending telemetry data to Azure Monitor. This data will help us in analyzing the usage and requirement of the particular devices.  
 
+
 **Availability chart of the machines for last 12 hours.**** 
 
  ![](./Images/Availability_Dashboard.png)
  
+ 
  **Performance chart of the machines for last 12 hours.** 
 
 ![](./Images/Performance_Dashboard.png)
+
 
 Based on this telemetry data we can identify whether that device is needed during off hours or we can safely turn it off.
 
@@ -55,12 +60,15 @@ Once the machine is identified we can initiate the runbook to shutdown it during
 
 ![](./Images/Automation-Runbooks.png)
 
+
  **Schedules for executing the Runbooks at specific times** 
 ![](./Images/Schedules.PNG)
 
 
 
 ##### 
+
+
 
 #### Implementation steps 
 
