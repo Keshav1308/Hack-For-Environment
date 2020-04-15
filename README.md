@@ -142,5 +142,5 @@ Hybrid Runbook Workers jobs run under the local System account on Windows server
 |              |                                                              |
 | ------------ | ------------------------------------------------------------ |
 | Team Name    | Hack-For-Environment                                         |
-| Team Members | Keshav Deo Jain  https://www.linkedin.com/in/keshav-jain-016427121/<br /> Nilankar Sen https://www.linkedin.com/in/nilankar-sen-b36589a4/ |
+| Team Members | Keshav Deo Jain  https://www.linkedin.com/in/keshav-jain-016427121/<br /> |
 
